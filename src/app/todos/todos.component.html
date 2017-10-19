@@ -1,0 +1,21 @@
+<div *ngIf=" todos && todos.length > 0" class="row" style="height: 100%;display: flex;justify-content: center;align-items: center;">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+            <div class="card-header">
+                TODO Lists
+            </div>
+            <div class="card-block" style="max-height: 350px; overflow: auto;">
+                <ul class="list-unstyled">
+                    <clr-checkbox *ngFor="let item of todos" [(clrChecked)]="item.completed">
+                        {{ item.title }}
+                        <clr-icon shape="trash" (click) = "removeTodo(item)"></clr-icon>
+
+                    </clr-checkbox>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a class="btn btn-primary" (click)="saveTodos()">Save</a>
+            </div>
+        </div>
+    </div>
+</div>

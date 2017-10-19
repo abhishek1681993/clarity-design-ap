@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">
+    {{userInformation.name}}
+  </div>
+  <div class="card-block">
+    <div class="card-title">
+      Basic information:
+    </div>
+    <div class="card-text">
+      <address>
+        Username: {{userInformation.username}},
+        <br/> Email: {{userInformation.email}},
+        <br/> Contact: {{userInformation.phone}},
+        <br/> Website: {{userInformation.website}}
+        <br/>
+      </address>
+    </div>
+  </div>
+
+  <div class="card-block">
+    <div class="card-title">
+      Company Details:
+    </div>
+    <div class="card-text">
+      <address>
+        Name: {{userInformation.company.name}},
+        <br/> BS: {{userInformation.company.bs}},
+        <br/> CatchPhrase: {{userInformation.company.catchPhrase}}
+      </address>
+    </div>
+  </div>
+  <div class="card-block">
+    <div class="card-title">
+      Address:
+    </div>
+    <div class="card-text">
+      <address>
+        City: {{userInformation.address.city}},
+        <br/> Street: {{userInformation.address.street}},
+        <br/> Suite: {{userInformation.address.suite}},
+        <br/> Zipcode: {{userInformation.address.zipcode}}
+        <br/>
+      </address>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <a class="btn btn-primary" (click)="navigateTo(userInformation)" >View Todos</a>
+  </div>
+</div>
